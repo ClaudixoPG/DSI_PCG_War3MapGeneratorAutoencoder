@@ -5,9 +5,11 @@ var wc3maptranslator_1 = require("wc3maptranslator");
 //make a for loop to iterate through all the files in the folder
 //for each folder, search for the .w3e file and convert it to json
 //then save the json file in the folder "ConvertedMaps" in a route like this: "ConvertedMaps\mapName.json"
-var mapsFolder = "D:\\DSI_PCG\\ExtractedMaps";
+//var mapsFolder = "D:\\DSI_PCG\\ExtractedMaps";
+var mapsFolder = "C:\\Users\\claud\\Desktop\\asd\\ExtractedMaps";
 var maps = fs.readdirSync(mapsFolder);
-for (var i = 2100; i < maps.length; i++) {
+console.log(maps);
+for (var i = 0; i < maps.length; i++) {
     var mapName = maps[i];
     var mapPath = mapsFolder + "\\" + mapName;
     var mapFiles = fs.readdirSync(mapPath);
